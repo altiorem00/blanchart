@@ -1,1 +1,1 @@
-# ![demo](http://a90918x7.beget.tech/)
+# [demo](http://a90918x7.beget.tech/)
