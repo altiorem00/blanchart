@@ -1,0 +1,252 @@
+.catalog {
+    display: flex;
+    @include respond-to(lg) {
+        flex-direction: column-reverse;
+    }
+    &__col {
+        width: 50%;
+        & + & {
+            width: calc(50% - 50px);
+            margin-left: 50px;
+        }
+        @include respond-to(xl) {
+            width: calc(50% - 25px);
+            & + & {
+                width: calc(50% - 25px);
+            }
+        }
+        @include respond-to(lg) {
+            width: 100%;
+            & + & {
+                width: 100%;
+                margin-left: 0px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        &-img {
+            height: 470px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            @include respond-to(xl) {
+                height: 274px;
+            }
+            @include respond-to(lg) {
+                height: 419px;
+            }
+            @include respond-to(md) {
+                height: 181px;
+            }
+        }
+        &-name {
+            color: #333333;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            margin-top: 30px;
+        }
+        &-date {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #999999;
+            margin-top: 8px;
+        }
+        &-desc {
+            margin-top: 8px;
+            @include font-size-get('p2');
+        }
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        &-link {
+            font-weight: 400;
+            @include font-size-get('p2');
+            color: #333333;
+            border-bottom: 1px solid transparent;
+            @include baseHover {
+                color: #9d5cd0;
+                border-color: #9d5cd0;
+            }
+            &:active {
+                color: #7943a4;
+                border-color: transparent;
+            }
+        }
+        &-list {
+            column-count: 3;
+            column-gap: 60px;
+            @include respond-to(xl) {
+                column-count: 2;
+            }
+        }
+        &-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #d1a9f0;
+            border: 2px solid #9d5cd0;
+            @include respond-to(md) {
+                width: 30px;
+                height: 30px;
+            }
+            svg {
+                fill: none;
+                transform: scale(1, -1);
+                transition: all 0.2s ease-in-out;
+                @include respond-to(md) {
+                    width: 12px;
+                    height: 10px;
+                }
+            }
+            @include baseHover {
+            }
+        }
+        .accordion-item {
+            border: none;
+            cursor: pointer;
+            background: transparent;
+            & + .accordion-item {
+                margin-top: -1px;
+            }
+            &:hover {
+                z-index: 2;
+            }
+        }
+        .accordion-body {
+            padding: 25px 0px;
+            @include respond-to(md) {
+                padding: 20px 0px;
+            }
+        }
+        .accordion-header {
+            padding: 32px 0px;
+            border-top: 1px solid #7943a4;
+            border-bottom: 1px solid #7943a4;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #333333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &.collapsed {
+                border-color: #cacaca;
+                .catalog__items-icon {
+                    background: #ececec;
+                    border: 2px solid transparent;
+                    svg {
+                        transform: scale(1, 1);
+                    }
+                }
+            }
+            &:active {
+                border-color: #7943a4;
+                .catalog__items-icon {
+                    background: #d1a9f0;
+                    border-color: #9d5cd0;
+                }
+            }
+            @include baseHover {
+                border-color: #9d5cd0;
+                .catalog__items-icon {
+                    transition: none;
+                    background: #d1a9f0;
+                }
+            }
+        }
+    }
+    &__slug {
+        display: flex;
+        &-squart {
+            width: 275px;
+            height: 189px;
+            border: 2px solid #b7b7b7;
+            padding: 12px;
+            span {
+                background: #b7b7b7;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+        &-content {
+            margin-left: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 275px;
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #333333;
+        }
+        &-subtitle {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #333333;
+            margin-top: 8px;
+        }
+        &-link {
+            margin-top: 5px;
+            color: #9d5cd0;
+            border-bottom: 1px solid transparent;
+            width: max-content;
+            @include baseHover {
+                border-color: #9d5cd0;
+            }
+            &:active {
+                color: #7943a4;
+                border-color: #7943a4;
+            }
+        }
+        &-img {
+            height: 470px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ececec;
+            svg {
+                max-width: 90%;
+                max-height: 90%;
+            }
+            @include respond-to(xl) {
+                height: 274px;
+            }
+            @include respond-to(lg) {
+                height: 419px;
+            }
+            @include respond-to(md) {
+                height: 181px;
+            }
+        }
+        &--large {
+            display: block;
+            .catalog__slug-content {
+                display: block;
+                margin-top: 30px;
+                max-width: initial;
+                margin-left: 0px;
+            }
+            .catalog__slug-link {
+                margin-top: 15px;
+                display: block;
+            }
+            .catalog__slug-subtitle {
+                margin-top: 15px;
+            }
+        }
+    }
+}

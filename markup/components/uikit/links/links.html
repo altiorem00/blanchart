@@ -1,0 +1,9 @@
+<a href="#{{href}}" class="link {{#if type}}link--{{type}}{{/if}} {{#if class}}{{class}}{{/if}} {{#if icon-left}}link--icon-left{{/if}}">
+    {{#if icon-left}}
+        {{Icon iconName=icon-left className="link__icon"}}
+    {{/if}}
+    {{text}}
+    {{#if icon-right}}
+        {{Icon iconName=icon-right className="link__icon"}}
+    {{/if}}
+</a>

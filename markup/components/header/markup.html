@@ -1,0 +1,64 @@
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            {{Icon iconName="burger" className="header__burger"}}
+            <a href="/" class="header__logo">
+                {{Icon iconName="logo"}}
+            </a>
+            <nav class="header__nav">
+                {{>uikit/links/links text="О нас" class="header__nav-link" type="light"  href="aboutUs"}}
+                {{>uikit/links/links text="Галерея" class="header__nav-link" type="light" href="gallery"}}
+                {{>uikit/links/links text="Каталог" class="header__nav-link" type="light" href="catalog"}}
+                {{>uikit/links/links text="События" class="header__nav-link" type="light" href="news"}}
+                {{>uikit/links/links text="Проекты" class="header__nav-link" type="light" href="projects"}}
+                {{>uikit/links/links text="Контакты" class="header__nav-link" type="light" href="contacts"}}
+            </nav>
+            <div class="header__auth">
+                {{>uikit/links/links text="Войти" type="light" icon-left="auth"}}
+            </div>
+            {{Icon iconName="search" className="header__search"}}
+        </div>
+    </div>
+    <div class="header__menu">
+        <div class="container">
+            <div class="header__menu-wrapper">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        {{>dropdown/dropdown title="Реализм"}}
+                    </li>
+                    <li class="header__menu-item">
+                        {{>dropdown/dropdown title="Импрессионизм"}}
+                    </li>
+                    <li class="header__menu-item">
+                        {{>dropdown/dropdown title="Постимпрессионизм"}}
+                    </li>
+                    <li class="header__menu-item">
+                        {{>dropdown/dropdown title="Авангард"}}
+                    </li>
+                    <li class="header__menu-item">
+                        {{>dropdown/dropdown title="Футуризм"}}
+                    </li>
+                </ul>
+                <div class="header__menu-search">
+                    {{>uikit/fields/f-input/f-input icon-left="search" type="transparent" placeholder="Поиск по сайту"}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__toggle">
+        <div class="container">
+            <div class="header__toggle-wrapper">
+                {{Icon iconName="close" className="header__toggle-close"}}
+                <nav class="header__toggle-nav">
+                    {{>uikit/links/links text="О нас" class="header__nav-link" type="light"  href="aboutUs"}}
+                    {{>uikit/links/links text="Галерея" class="header__nav-link" type="light" href="gallery"}}
+                    {{>uikit/links/links text="Каталог" class="header__nav-link" type="light" href="catalog"}}
+                    {{>uikit/links/links text="События" class="header__nav-link" type="light" href="news"}}
+                    {{>uikit/links/links text="Проекты" class="header__nav-link" type="light" href="projects"}}
+                    {{>uikit/links/links text="Контакты" class="header__nav-link" type="light" href="contacts"}}
+                </nav>
+                {{>uikit/buttons/markup text="Войти" icon-left="auth" type="transparent" class="header__toggle-btn"}}
+            </div>
+        </div>
+    </div>
+</header>

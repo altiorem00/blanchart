@@ -1,0 +1,64 @@
+.f-input {
+    $f-input: &;
+    display: inline-flex;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0px;
+    @include font-size-get('link');
+    font-weight: 400;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid $c-brand4;
+    color: $c-black;
+    outline: none;
+    @include baseHover {
+    }
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    &.error {
+        border-color: $c-red;
+    }
+
+    &:disabled,
+    &--disabled,
+    #{$f-input}__wrapper.disabled & {
+        pointer-events: none;
+        opacity: 0.7;
+    }
+
+    &__wrapper {
+        $wrapper: &;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__icon {
+        width: 22px;
+        height: 22px;
+        cursor: text;
+    }
+
+    &--transparent {
+        padding: 0px;
+        padding-bottom: 6px;
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        height: 26px;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #c283f3;
+        }
+    }
+    &--icon-left {
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 9px;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.projects {
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #333333;
+    }
+    &__list {
+        margin-top: 23px;
+        padding: 0px 75px;
+        position: relative;
+        @include respond-to(xl) {
+            padding: 0px 53px;
+        }
+        @include respond-to(md) {
+            padding: 0px 47px;
+        }
+        .swiper {
+            overflow: hidden;
+            .swiper-button-prev {
+                left: 0;
+            }
+            .swiper-button-next {
+                right: 0;
+            }
+        }
+    }
+    &__item {
+        width: 100%;
+        height: 150px;
+        background: #ffffff;
+        border: 1px solid #cacaca;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: grayscale(1);
+        transition: all 0.4s ease-in-out;
+        padding: 20px;
+
+        @include respond-to(xl) {
+            height: 128px;
+        }
+        @include respond-to(lg) {
+            height: 108px;
+        }
+        @include respond-to(md) {
+            height: 67px;
+        }
+        &:hover {
+            filter: none;
+            transition: none;
+        }
+        &:active {
+            border-color: #9d5cd0;
+        }
+        &-img {
+            object-fit: contain;
+            object-position: center;
+            max-width: 80%;
+            max-height: 90%;
+        }
+    }
+}

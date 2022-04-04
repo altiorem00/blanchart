@@ -1,0 +1,26 @@
+{{>page/templates/top page.defaults}}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Ссылки</h2>
+            </div>
+            <div class="col-md-2">
+                {{>uikit/links/links text='Дефолт'}}
+            </div>
+            <div class="col-md-2">
+                {{>uikit/links/links type="phone" text="Номер телефона"}}
+            </div>
+            <div class="col-md-2">
+                {{>uikit/links/links type="colored" text="Цветная"}}
+            </div>
+            <div class="col-md-2" style="background: linear-gradient(90deg, #FD3A84 0%, #FFA68D 100%); padding: 10px;">
+                {{>uikit/links/links type="light" text="На цветном фоне"}}
+            </div>
+            <div class="col-md-2">
+                {{>uikit/links/links type="menu" text="меню"}}
+            </div>
+        </div>
+    </div>
+</section>
+{{>page/templates/bottom page.defaults}}

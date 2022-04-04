@@ -1,0 +1,14 @@
+<label
+    class="f-input__wrapper{{#if disabled}} disabled{{/if}} {{#if class}} {{class}} {{/if}} {{#if icon-left}}f-input--icon-left{{/if}} {{#if icon-right}}f-input--icon-right{{/if}}"
+    {{#if label}} data-label="{{label}}" {{/if}}>
+    {{#if icon-left}}
+    {{Icon iconName=icon-left className="f-input__icon"}}
+    {{/if}}
+    <input {{#if number}}data-number-format{{/if}} {{#if mask}}data-phone-mask="{{mask}}" {{/if}}
+        name="{{#if name}}{{name}}{{else}}default{{/if}}" {{#if value}}value="{{value}}" {{/if}} type="text" {{#if
+        required}} required{{/if}}{{#if placeholder}} placeholder="{{placeholder}}" {{/if}}
+        class="f-input {{#if error}}error{{/if}} {{#if type}}f-input--{{type}}{{/if}}">
+    {{#if icon-right}}
+    {{Icon iconName=icon-right className="f-input__icon"}}
+    {{/if}}
+</label>

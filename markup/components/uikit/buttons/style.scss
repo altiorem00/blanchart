@@ -1,0 +1,53 @@
+.button {
+    border-radius: 100px;
+    text-decoration: none;
+    color: $c-white;
+    @include font-size-get('button');
+    font-weight: 700;
+    padding: 22px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c-brand1;
+    border: 3px solid transparent;
+    cursor: pointer;
+    width: max-content;
+    @include respond-to(md) {
+        padding: 11px 20px;
+    }
+    @include baseHover {
+        border-color: $c-brand3;
+    }
+
+    &:focus {
+        background-color: $c-brand2;
+        border-color: $c-brand3;
+    }
+    &__wrapper {
+        text-decoration: none;
+        display: block;
+        width: max-content;
+    }
+    &--transparent {
+        padding: 17px 35px;
+        background-color: transparent;
+        border: 2px solid #9d5cd0;
+        font-weight: 600;
+        @include respond-to(md) {
+            padding: 11px 32px;
+        }
+        @include baseHover {
+            background: #9d5cd0;
+            border-color: #9d5cd0;
+        }
+        &:focus {
+            background-color: $c-brand2;
+            border-color: $c-brand3;
+        }
+    }
+    &--icon-left {
+        svg {
+            margin-right: 8px;
+        }
+    }
+}

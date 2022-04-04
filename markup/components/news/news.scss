@@ -1,0 +1,95 @@
+.news {
+    position: relative;
+    display: flex;
+    &__card {
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        @include respond-to(xl) {
+            min-height: 683px;
+        }
+        &-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            @include respond-to(xl) {
+                height: 200px;
+            }
+        }
+        &-content {
+            padding: 13px 50px 48px;
+            border: 1px solid #cacaca;
+            border-top: 0px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            @include respond-to(xl) {
+                padding: 13px 34px 48px;
+            }
+        }
+        &-date {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            color: #999999;
+            @include respond-to(xl) {
+                text-align: right;
+            }
+        }
+        &-name {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            margin-top: 13px;
+            color: #333333;
+            @include respond-to(xl) {
+                margin-top: 4px;
+            }
+        }
+        &-text {
+            @include font-size-get('p2');
+            color: #333333;
+            margin-top: 10px;
+            @include respond-to(xl) {
+                margin-top: 5px;
+            }
+        }
+        &-link {
+            color: #9d5cd0;
+            border-bottom: 1px solid #9d5cd0;
+            margin-top: auto;
+            width: max-content;
+            @include baseHover {
+                color: #7943a4;
+                border-color: #7943a4;
+            }
+            &:active {
+                color: #333333;
+                border-color: #333333;
+            }
+        }
+    }
+    .swiper {
+        overflow: hidden;
+        .swiper-button-next {
+            right: -14px;
+        }
+        .swiper-button-prev {
+            left: -14px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            @include respond-to(xl) {
+                display: none;
+            }
+        }
+        .swiper-pagination {
+            display: none;
+            @include respond-to(xl) {
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.f-checkbox {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: max-content;
+    @include font-size-get('p2');
+    @include baseHover {
+        color: #c283f3;
+        &__squart {
+            border-color: #c283f3;
+        }
+    }
+    input {
+        display: none;
+        &:checked {
+            & ~ .f-checkbox__squart {
+                border-color: #c283f3;
+                transition: border-color 0.2s ease-in-out;
+                &::before {
+                    opacity: 1;
+                }
+            }
+            & + .f-checkbox__label {
+                color: #c283f3;
+            }
+        }
+        & ~ .f-checkbox__squart {
+            position: relative;
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            border-radius: 4px;
+            border: 1px solid #c283f3;
+            @include baseHover {
+            }
+            &::before {
+                content: '';
+                width: 33%;
+                height: 33%;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                background: #c283f3;
+                transition: opacity 0.2s ease-in-out;
+            }
+        }
+    }
+}

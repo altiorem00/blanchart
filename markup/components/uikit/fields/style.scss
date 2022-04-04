@@ -1,0 +1,7 @@
+.f-fields {
+    &__name {
+        padding-bottom: 17px;
+        @include font-size-get('p3');
+        font-weight: normal;
+    }
+}

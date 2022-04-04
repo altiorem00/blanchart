@@ -1,0 +1,166 @@
+.header {
+    background: $c-black;
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+    & > .container {
+        background: $c-black;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        @include respond-to(md) {
+            height: 45px;
+        }
+        @include respond-to(xl) {
+            justify-content: space-between;
+        }
+    }
+    &__logo {
+        margin-right: 179px;
+        width: 173px;
+        height: 40px;
+        @include respond-to(md) {
+            width: 97px;
+            height: 22px;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        @include respond-to(xl) {
+            margin-right: 0px;
+        }
+    }
+    &__nav {
+        display: flex;
+        margin: 0px -31px;
+        &-link {
+            color: $c-white;
+            @include font-size-get('link');
+            margin: 0px 31px;
+            font-weight: 600;
+        }
+        @include respond-to(xl) {
+            display: none;
+        }
+    }
+    &__auth {
+        color: $c-white;
+        @include font-size-get('link');
+        margin-left: auto;
+        @include respond-to(xl) {
+            display: none;
+        }
+    }
+    &__burger {
+        width: 36px;
+        height: 28px;
+        @include respond-to(md) {
+            width: 25px;
+            height: 18px;
+        }
+    }
+    &__search {
+        width: 29px;
+        height: 29px;
+        @include respond-to(md) {
+            height: 18px;
+            width: 18px;
+        }
+    }
+    &__search,
+    &__burger {
+        cursor: pointer;
+        display: none;
+        @include baseHover {
+        }
+        @include respond-to(xl) {
+            display: block;
+        }
+    }
+    &__menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-list {
+            display: flex;
+            align-items: center;
+            margin: 0px -48px;
+            @include respond-to(xl) {
+                display: none;
+            }
+        }
+        &-item {
+            margin: 0px 48px;
+        }
+        &-search {
+            width: 250px;
+        }
+        @include respond-to(xl) {
+            transform: translateY(-100%);
+            z-index: -1;
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            &.active {
+                transform: translateY(0%);
+            }
+        }
+        @include respond-to(md) {
+            height: 50px;
+        }
+    }
+    &__toggle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1001;
+        padding: 15px 0px 27px;
+        clip-path: circle(0% at 0 0);
+        opacity: 0;
+        visibility: hidden;
+        transition: clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1), all 0s ease 1s;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            clip-path: circle(150% at 0 0);
+            transition: clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .container {
+            height: 100%;
+        }
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+        }
+        &-link + &-link {
+            margin-top: 8px;
+        }
+        &-close {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+        &-btn {
+            margin-top: auto;
+        }
+    }
+}

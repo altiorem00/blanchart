@@ -1,0 +1,74 @@
+.hero {
+    height: calc(100vh - 100px);
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    @include respond-to(xl) {
+        min-height: 668px;
+    }
+    @include respond-to(md) {
+        min-height: initial;
+        height: 315px;
+    }
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .swiper {
+            height: 100%;
+            &-slide-active,
+            &-slide-duplicate-active {
+                .hero__slider-img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &-img {
+            transition: all 15s linear;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        color: #fff;
+        max-width: 600px;
+        @include respond-to(md) {
+            align-items: center;
+            text-align: center;
+            justify-content: flex-start;
+            padding-top: 30px;
+            max-width: initial;
+        }
+    }
+    &__title {
+        @include font-size-get('h1');
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+    &__text {
+        @include font-size-get('p1');
+        font-weight: 700;
+        margin-top: 12px;
+        @include respond-to(md) {
+            font-weight: 400;
+        }
+    }
+    &__btn {
+        margin-top: 92px;
+        @include respond-to(md) {
+            margin-top: 36px;
+        }
+    }
+}

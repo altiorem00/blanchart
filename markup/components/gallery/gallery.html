@@ -1,0 +1,94 @@
+<div class="gallery">
+    <img src="/static/img/content/gallery/gallery.jpg" alt="Галерея" class="gallery__bg">
+    <div class="container">
+        <div class="gallery__wrapper">
+            <div class="gallery__action">
+                <h2 class="gallery__action-title">
+                    Галерея
+                </h2>
+                <div class="gallery__action-filter">
+                    <span class="gallery__action-label">Фильтр:</span>
+                    <div class="gallery__action-field">
+                        {{>uikit/fields/f-select/f-select }}
+                    </div>
+                </div>
+                <div class="gallery__action-bottom">
+                    {{>uikit/fields/f-checkbox/f-checkbox class="gallery__action-checkbox" label="XIX век" }}
+                    {{>uikit/fields/f-checkbox/f-checkbox class="gallery__action-checkbox" label="XX век" }}
+                    {{>uikit/fields/f-checkbox/f-checkbox class="gallery__action-checkbox" label="Современность" }}
+                </div>
+            </div>
+            <div class="gallery__slider">
+                <div class="swiper swiper--gallery">
+                    <div class="gallery__slider-nav">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" href="/static/img/content/gallery/slider.jpg"
+                                data-caption="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, expedita dignissimos vero provident minima dicta fugit fuga odit eaque! Officiis ex iure, nobis expedita fuga non consectetur. Repudiandae, cum labore!"
+                                class="gallery__slider-item">
+                                <div class="gallery__slider-icon">
+                                    {{Icon iconName="zoom"}}
+                                </div>
+                                <img src="/static/img/content/gallery/slider.jpg" alt="Lorem ipsum" class="gallery__slider-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" href="/static/img/content/gallery/slider1.jpg"
+                                data-caption="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, expedita dignissimos vero provident minima dicta fugit fuga odit eaque! Officiis ex iure, nobis expedita fuga non consectetur. Repudiandae, cum labore!"
+                                class="gallery__slider-item">
+                                <div class="gallery__slider-icon">
+                                    {{Icon iconName="zoom"}}
+                                </div>
+                                <img src="/static/img/content/gallery/slider1.jpg" alt="Lorem ipsum" class="gallery__slider-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" href="/static/img/content/gallery/slider2.jpg"
+                                data-caption="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, expedita dignissimos vero provident minima dicta fugit fuga odit eaque! Officiis ex iure, nobis expedita fuga non consectetur. Repudiandae, cum labore!"
+                                class="gallery__slider-item">
+                                <div class="gallery__slider-icon">
+                                    {{Icon iconName="zoom"}}
+                                </div>
+                                <img src="/static/img/content/gallery/slider2.jpg" alt="Lorem ipsum" class="gallery__slider-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" href="/static/img/content/gallery/slider3.jpg"
+                                data-caption="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, expedita dignissimos vero provident minima dicta fugit fuga odit eaque! Officiis ex iure, nobis expedita fuga non consectetur. Repudiandae, cum labore!"
+                                class="gallery__slider-item">
+
+                                <div class="gallery__slider-icon">
+                                    {{Icon iconName="zoom"}}
+                                </div>
+                                <img src="/static/img/content/gallery/slider3.jpg" alt="Lorem ipsum" class="gallery__slider-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" href="/static/img/content/gallery/slider4.jpg"
+                                data-caption="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, expedita dignissimos vero provident minima dicta fugit fuga odit eaque! Officiis ex iure, nobis expedita fuga non consectetur. Repudiandae, cum labore!"
+                                class="gallery__slider-item">
+                                <div class="gallery__slider-icon">
+                                    {{Icon iconName="zoom"}}
+                                </div>
+                                <img src="/static/img/content/gallery/slider4.jpg" alt="Lorem ipsum" class="gallery__slider-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" href="/static/img/content/gallery/slider5.jpg"
+                                data-caption="First image" class="gallery__slider-item">
+                                <div class="gallery__slider-icon">
+                                    {{Icon iconName="zoom"}}
+                                </div>
+                                <img src="/static/img/content/gallery/slider5.jpg" alt="Lorem ipsum" class="gallery__slider-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

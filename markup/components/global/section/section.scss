@@ -1,0 +1,73 @@
+.section {
+    & + & {
+        margin-top: 80px;
+        @include respond-to(md) {
+            margin-top: 50px;
+        }
+    }
+    & + &--concat {
+        margin-top: 0px;
+    }
+    &__header {
+        &-title {
+            @include font-size-get('h2');
+            color: #333333;
+            font-weight: 400;
+        }
+        &-description {
+            @include font-size-get('p2');
+            margin-top: 16px;
+            max-width: 1080px;
+            @include respond-to(md) {
+                margin-top: 12px;
+            }
+        }
+        &-tooltip {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #9d5cd0;
+            color: #000000;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            @include baseHover {
+                background: #d1a9f0;
+            }
+            &:active {
+                background: #9d5cd0;
+            }
+            svg {
+                width: 2px;
+                height: 10px;
+            }
+        }
+        &-link {
+            color: #9d5cd0;
+            border-bottom: 1px solid transparent;
+            @include baseHover {
+                border-color: #9d5cd0;
+            }
+            &:active {
+                color: #7943a4;
+                border-color: #7943a4;
+            }
+        }
+    }
+    &__header + &__body {
+        margin-top: 50px;
+        @include respond-to(lg) {
+            margin-top: 30px;
+        }
+        @include respond-to(md) {
+            margin-top: 12px;
+        }
+    }
+    &__header + &__body--mt-30 {
+        margin-top: 30px;
+        @include respond-to(md) {
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div class="map-shell">
+    <div class="map" id="mapContacts"></div>
+</div>
+<script>
+    (() => {
+        let arDataContact = {
+            yandexMapID: 'mapContacts',
+            zoom: 12,
+            center: { 'lat': 47.227483, 'lng': 39.716666 },
+            points: [
+                {
+                    position: {
+                        lat: 47.227483,
+                        lng: 39.716666,
+                    },
+                    hint: 'Леонтьевский переулок, дом 5/1'
+                },
+            ]
+        };
+        ymaps.ready(function () {
+            initYandexMap(arDataContact)
+        });
+    })();
+</script>

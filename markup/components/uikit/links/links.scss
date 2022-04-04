@@ -1,0 +1,22 @@
+.link {
+    color: $c-black;
+    @include font-size-get('link');
+    text-decoration: none;
+    position: relative;
+    @include baseHover {
+        color: $c-brand4;
+    }
+    &:focus {
+        color: $c-brand2;
+    }
+    &--light {
+        color: $c-white;
+    }
+    &--icon-left {
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 7px;
+        }
+    }
+}

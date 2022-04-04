@@ -1,0 +1,93 @@
+.swiper {
+    display: flex;
+    flex-direction: column;
+    &--stretch {
+        .swiper {
+            &-slide {
+                height: unset;
+                & > * {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &--overflow-opacity {
+        .swiper {
+            &-slide {
+                will-change: opacity;
+            }
+        }
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        display: none;
+    }
+    .swiper-button-prev:before,
+    .swiper-button-next:before {
+        content: '';
+        width: 10px;
+        height: 12px;
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11L0.999995 6L6 0.999998' stroke='white'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .swiper-static-nav {
+        display: flex;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        background: #666666;
+        border-radius: 50%;
+        border: 1px solid transparent;
+
+        @include baseHover {
+            background: #9d5cd0;
+        }
+        &:active {
+            border: 2px solid #000000;
+            background: #7943a4;
+        }
+    }
+    .swiper-button-next--light,
+    .swiper-button-prev--light {
+        background: #ececec;
+        @include baseHover {
+            background: #d1a9f0;
+        }
+        &:active {
+            border: 2px solid #9d5cd0;
+            background: #d1a9f0;
+        }
+    }
+    .swiper-button-next--light:before,
+    .swiper-button-prev--light:before {
+        filter: invert(1);
+    }
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+        opacity: 0.5;
+        &::before {
+            opacity: 0.5;
+        }
+    }
+    .swiper-button-next {
+        transform: rotate(180deg);
+    }
+    .swiper-pagination {
+        position: static;
+        margin-top: 30px;
+        justify-content: center;
+    }
+    .swiper-pagination-fraction {
+        margin-top: 0px;
+    }
+    .swiper-pagination-bullet {
+        background: #cacaca;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: #666666;
+    }
+}

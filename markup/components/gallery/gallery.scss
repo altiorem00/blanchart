@@ -1,0 +1,192 @@
+.gallery {
+    height: 595px;
+    position: relative;
+    color: #fff;
+    display: flex;
+    padding: 80px 0px;
+    @include respond-to(xl) {
+        height: 560px;
+    }
+    @include respond-to(lg) {
+        height: initial;
+    }
+    @include respond-to(md) {
+        padding: 50px 0px;
+    }
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        @include respond-to(lg) {
+            flex-direction: column;
+            align-items: initial;
+        }
+    }
+    &__bg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__action {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+        &-title {
+            @include font-size-get('h2');
+            font-weight: 400;
+        }
+        &-label {
+            @include font-size-get('p2');
+        }
+        &-field {
+            margin-top: 10px;
+        }
+        &-filter {
+            margin-top: 16px;
+            @include respond-to(md) {
+                margin-top: 12px;
+            }
+        }
+        &-bottom {
+            margin-top: auto;
+            @include respond-to(lg) {
+                margin-top: 40px;
+            }
+            @include respond-to(md) {
+                margin-top: 30px;
+            }
+        }
+        &-checkbox {
+            & + & {
+                margin-top: 8px;
+            }
+        }
+        @include respond-to(xl) {
+            width: 30%;
+        }
+        @include respond-to(lg) {
+            width: 100%;
+            max-width: 280px;
+            height: initial;
+        }
+    }
+    &__slider {
+        position: relative;
+        flex: 0 0 auto;
+        width: calc(75% - 50px);
+        margin-left: 50px;
+        overflow: hidden;
+        @include respond-to(xl) {
+            width: calc(70% - 50px);
+        }
+        @include respond-to(lg) {
+            width: 100%;
+            margin-left: 0px;
+            margin-top: 40px;
+        }
+        @include respond-to(md) {
+            margin-top: 30px;
+        }
+        &-nav {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+            color: #fff;
+            .swiper-button-next,
+            .swiper-button-prev {
+                position: static;
+                margin-top: 0px;
+            }
+            .swiper-pagination {
+                position: static;
+                margin: 0px 12px;
+                width: initial;
+                @include font-size-get('p2');
+                font-weight: 400;
+            }
+        }
+        &-item {
+            width: 100%;
+            height: 350px;
+            border: 2px solid transparent;
+            position: relative;
+            display: block;
+            @include respond-to(xl) {
+                height: 315px;
+            }
+            @include respond-to(lg) {
+                height: 330px;
+            }
+            @include respond-to(md) {
+                height: 367px;
+            }
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+                transition: all 0.1s ease-in-out;
+            }
+            &:active {
+                border: 2px solid #d1a9f0;
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        &-icon {
+            $offset: 25px;
+            width: calc(100% - #{$offset});
+            height: calc(100% - #{$offset});
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+
+            svg {
+                transform: translateY(5px);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &-item:hover &-icon {
+            opacity: 1;
+            svg {
+                transform: translateY(0);
+            }
+        }
+        @include respond-to(md) {
+            .swiper {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            &-nav {
+                margin-bottom: 0px;
+                margin-top: 20px;
+                justify-content: center;
+            }
+        }
+    }
+}
