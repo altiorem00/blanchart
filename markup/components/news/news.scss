@@ -53,7 +53,7 @@
             color: #333333;
             margin-top: 10px;
             @include respond-to(xl) {
-                margin-top: 5px;
+                margin-top: 4px;
             }
         }
         &-link {

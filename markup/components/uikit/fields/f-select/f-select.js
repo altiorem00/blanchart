@@ -14,7 +14,6 @@ function initSlimSelect(selector) {
             showSearch: false,
             closeOnSelect: !item.multiple,
             allowDeselectOption: true,
-            placeholder: item.attributes.placeholder.value,
             onChange: (info) => {
                 if (item.multiple) {
                     if (info.length > 0) {

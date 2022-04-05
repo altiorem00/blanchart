@@ -1,5 +1,4 @@
 .hero {
-    height: calc(100vh - 100px);
     min-height: 700px;
     position: relative;
     display: flex;
@@ -8,7 +7,7 @@
     }
     @include respond-to(md) {
         min-height: initial;
-        height: 315px;
+        min-height: 315px;
     }
     &__slider {
         position: absolute;
@@ -40,14 +39,16 @@
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         height: 100%;
         color: #fff;
         max-width: 600px;
+        padding-top: 133px;
+        @include respond-to(xl) {
+            padding-top: 105px;
+        }
         @include respond-to(md) {
             align-items: center;
             text-align: center;
-            justify-content: flex-start;
             padding-top: 30px;
             max-width: initial;
         }

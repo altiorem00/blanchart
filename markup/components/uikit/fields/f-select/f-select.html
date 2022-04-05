@@ -1,5 +1,5 @@
-<div class="f-select__wrapper js-select-shell">
-    <select class="f-select" {{#if multiple}}multiple{{/if}} placeholder="{{placeholder}}">
+<div class="{{#if class}}{{class}}{{/if}} f-select__wrapper js-select-shell">
+    <select class="f-select" {{#if multiple}}multiple{{/if}}>
         {{#unless multiple}}
         <option value="0" selected>Живопись</option>
         {{/unless}}

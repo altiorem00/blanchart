@@ -65,7 +65,7 @@
         }
         &-checkbox {
             & + & {
-                margin-top: 8px;
+                margin-top: 1px;
             }
         }
         @include respond-to(xl) {
@@ -106,7 +106,7 @@
             }
             .swiper-pagination {
                 position: static;
-                margin: 0px 12px;
+                margin: 0px 20px;
                 width: initial;
                 @include font-size-get('p2');
                 font-weight: 400;
@@ -115,7 +115,7 @@
         &-item {
             width: 100%;
             height: 350px;
-            border: 2px solid transparent;
+            outline: 2px solid transparent;
             position: relative;
             display: block;
             @include respond-to(xl) {
@@ -139,7 +139,7 @@
                 transition: all 0.1s ease-in-out;
             }
             &:active {
-                border: 2px solid #d1a9f0;
+                outline: 2px solid #d1a9f0;
                 &::before {
                     opacity: 1;
                 }

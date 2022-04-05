@@ -20,9 +20,8 @@
     height: 100%;
 }
 @mixin baseHover {
-    transition: fill .35s ease-out,color .35s ease-out,background .35s ease-out,border-color .35s ease-out,opacity .35s ease-out;
+    transition: all .2s ease-in-out;
     &:hover {
-        transition: none;
         @content;
     }
 }

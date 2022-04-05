@@ -29,10 +29,9 @@
         }
         & ~ .f-checkbox__squart {
             position: relative;
-            width: 18px;
-            height: 18px;
-            margin-right: 8px;
-            border-radius: 4px;
+            width: 12px;
+            height: 12px;
+            margin-right: 12px;
             border: 1px solid #c283f3;
             @include baseHover {
             }
