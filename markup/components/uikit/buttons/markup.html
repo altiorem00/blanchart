@@ -1,12 +1,10 @@
-<button class="{{#if class}}{{class}}{{/if}} button__wrapper">
-    <a href="#{{href}}" class="button {{#if type}}button--{{type}}{{/if}} {{#if icon-left}}button--icon-left{{/if}}">
-        {{#if icon-left}}
-        {{Icon iconName=icon-left className="button__icon"}}
-        {{/if}}
-        {{text}}
-        {{#if icon-right}}
-        {{Icon iconName=icon-right className="button__icon"}}
-        {{/if}}
-    </a>
-</button>
-
+<{{#if href}}a href="#{{href}}" {{else}}button{{/if}}
+    class="{{#if class}}{{class}}{{/if}} button {{#if type}}button--{{type}}{{/if}} {{#if icon-left}}button--icon-left{{/if}}">
+    {{#if icon-left}}
+    {{Icon iconName=icon-left className="button__icon"}}
+    {{/if}}
+    {{text}}
+    {{#if icon-right}}
+    {{Icon iconName=icon-right className="button__icon"}}
+    {{/if}}
+</{{#if href}}a{{else}}button{{/if}}>

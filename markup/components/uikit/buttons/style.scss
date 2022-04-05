@@ -12,7 +12,9 @@
     cursor: pointer;
     width: max-content;
     outline: 3px solid transparent;
-
+    text-decoration: none;
+    display: block;
+    width: max-content;
     @include respond-to(md) {
         padding: 11px 20px;
     }
@@ -24,11 +26,7 @@
         background-color: $c-brand2;
         outline: 3px solid $c-brand3;
     }
-    &__wrapper {
-        text-decoration: none;
-        display: block;
-        width: max-content;
-    }
+
     &--transparent {
         padding: 17px 35px;
         background-color: transparent;
