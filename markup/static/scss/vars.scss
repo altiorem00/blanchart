@@ -15,7 +15,7 @@ $c-brand3: #D1A9F0;
 $c-brand4: #C283F3;
 
 $breakpoints: (
-    'sm': 0px,
+    'sm': 0,
     'md': 768px,
     'lg': 1024px,
     'xl': 1440px,
@@ -23,7 +23,7 @@ $breakpoints: (
 
 // Breakpoint map for bootstrap
 $grid-breakpoints: (
-    'sm': 0px,
+    'sm': 0,
     'md': 768px,
     'lg': 1024px,
     'xl': 1440px,

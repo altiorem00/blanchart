@@ -4,8 +4,8 @@ module.exports = {
         "active": true,
         "workflow": "symbols",
         "symbolsConfig": {
-            "loadingType": "separate-file-with-link",
-            "usePolyfillForExternalSymbols": true,
+            "loadingType": "inject",
+            "usePolyfillForExternalSymbols": false,
             "pathToExternalSymbolsFile": ""
         }
     },
